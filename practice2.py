@@ -9,19 +9,19 @@ class WeatherForecast:
     def fetch_weather_data(self, city):
         return self.weather_data.get(city, {})
     
-    def parse_weather_data(data):
-        if not data:
-            return "Weather data not available"
-        city = data["city"]
-        temperature = data["temperature"]
-        condition = data["condition"]
-        humidity = data["humidity"]
-        return f"Weather in {city}: {temperature} degrees, {condition}, Humidity: {humidity}%"
+def parse_weather_data(data):
+    if not data:
+        return "Weather data not available"
+    city = data["city"]
+    temperature = data["temperature"]
+    condition = data["condition"]
+    humidity = data["humidity"]
+    return f"Weather in {city}: {temperature} degrees, {condition}, Humidity: {humidity}%"
 
 def get_detailed_forecast(city):
     my_weather = WeatherForecast()
     data = my_weather.fetch_weather_data(city)
-    return my_weather.parse_weather_data(data)
+    return parse_weather_data(data)
 
 def display_weather(city):
     my_weather = WeatherForecast()
