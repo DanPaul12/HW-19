@@ -29,7 +29,7 @@ def display_weather(city):
     if not data:
         print(f"Weather data not available for {city}")
     else:
-        weather_report = parse_weather_data(data)
+        weather_report = my_weather.parse_weather_data(data)
         print(weather_report)
     
 
